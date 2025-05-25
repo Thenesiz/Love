@@ -1,0 +1,162 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Hero Section */
+  #hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #121212;
+  }
+  
+  #hero h1 {
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+  }
+  
+  #hero h2 {
+    font-size: 0.85rem;
+    color: #ff69b4;
+    margin: 3rem auto 1rem;
+    text-align: justify;
+    font-style: italic;
+    max-width: 900px;
+  }
+  
+  #hero p {
+    font-size: 0.75rem;
+    color: #f1f1f1;
+  }
+  
+  /* Gallery Container */
+  .gallery-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  /* Chunk */
+  .chunk {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+  
+  /* Message below chunk */
+  .message {
+    font-style: italic;
+    color: #ff69b4;
+    font-size: 0.75rem;
+    max-width: 700px;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  /* Image Card */
+  .image-card {
+    max-width: 220px;
+    width: 100%;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .image-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(255, 105, 180, 0.4);
+  }
+  
+  .image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .gallery-container {
+      padding: 1rem;
+    }
+  
+    .image-card {
+      max-width: 90%;
+    }
+  
+    .message {
+      max-width: 90%;
+      font-size: 0.7rem;
+    }
+  }
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 18, 18, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    color: #ff69b4;
+    max-width: 90%;
+    width: 300px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    animation: popupAppear 0.3s ease;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+  }
+  
+  .popup-buttons button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  #yesBtn {
+    background-color: #ff69b4;
+    color: white;
+  }
+  
+  #noBtn {
+    background-color: #333;
+    color: white;
+  }
+  
+  @keyframes popupAppear {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+    
